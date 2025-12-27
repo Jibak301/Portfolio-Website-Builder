@@ -1,0 +1,232 @@
+/* ========== GLOBAL ========== */
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f8;
+}
+
+/* ========== LAYOUT ========== */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ========== SIDEBAR ========== */
+.sidebar {
+  width: 240px;
+  background: #111827;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sidebar button {
+  background: transparent;
+  border: none;
+  color: #e5e7eb;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sidebar button:hover {
+  background: #1f2933;
+}
+
+.sidebar hr {
+  border: none;
+  border-top: 1px solid #374151;
+  margin: 15px 0;
+}
+
+/* ========== CONTENT ========== */
+.content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+/* ========== CARDS ========== */
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/* ========== INPUTS ========== */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* ========== BUTTONS ========== */
+button {
+  padding: 10px 14px;
+  background: #4f46e5;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #4338ca;
+}
+
+/* ========== AVATAR ========== */
+.avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+  border: 3px solid #4f46e5;
+}
+
+/* ========== SKILLS & PROJECT LIST ========== */
+.card div {
+  margin-bottom: 8px;
+}
+
+.card div button {
+  background: #ef4444;
+  margin-left: 10px;
+}
+
+.card div button:hover {
+  background: #dc2626;
+}
+
+/* ========== RESUME LINK ========== */
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* ========== DRAG & DROP ========== */
+.sidebar button[draggable="true"] {
+  cursor: grab;
+}
+
+.sidebar button:active {
+  cursor: grabbing;
+}
+
+/* ========== DARK MODE ========== */
+.dashboard-layout.dark {
+  background: #0f172a;
+}
+
+.dashboard-layout.dark .content {
+  background: #0f172a;
+}
+
+.dashboard-layout.dark .card {
+  background: #1e293b;
+  color: #e5e7eb;
+}
+
+.dashboard-layout.dark input,
+.dashboard-layout.dark textarea,
+.dashboard-layout.dark select {
+  background: #020617;
+  color: #e5e7eb;
+  border: 1px solid #334155;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+  .dashboard-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sidebar button {
+    flex: 1 1 45%;
+    justify-content: center;
+  }
+
+  .content {
+    padding: 15px;
+  }
+}
+/* ========== TEMPLATE SELECTOR ========== */
+.template-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.template-card {
+  padding: 18px;
+  border-radius: 12px;
+  border: 2px solid #e5e7eb;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.2s;
+  background: #fff;
+}
+
+.template-card:hover {
+  transform: translateY(-4px);
+  border-color: #4f46e5;
+}
+
+.template-card.active {
+  border-color: #4f46e5;
+  background: #eef2ff;
+}
+
+.dashboard-layout.dark .template-card {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+.dashboard-layout.dark .template-card.active {
+  background: #312e81;
+}

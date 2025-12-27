@@ -1,0 +1,69 @@
+/* ========== MODERN ========== */
+.modern-template {
+  padding: 30px;
+  font-family: system-ui, sans-serif;
+}
+
+.modern-hero {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.modern-hero img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.modern-section {
+  margin-top: 40px;
+}
+
+.modern-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-chip {
+  background: #eef2ff;
+  padding: 10px 14px;
+  border-radius: 20px;
+}
+
+.modern-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ========== MINIMAL ========== */
+.minimal-template {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px;
+  font-family: serif;
+}
+
+.minimal-avatar {
+  width: 120px;
+  border-radius: 50%;
+}
+
+.minimal-project {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
