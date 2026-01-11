@@ -70,3 +70,4 @@ Users can manage their profile, skills, projects, resume, and design preferences
 - bcryptjs (Password Security)
 
  
+
